@@ -1,0 +1,30 @@
+<div class="container" id="main">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group card animated fadeInUp col-md-6 mx-auto" id="form_container">
+            <h2 style="text-align: center">
+            <label class="col-form-label text-center padding-top-20"><i class="fa fa-users" aria-hidden="true"></i> Enter First or Last Name</label>
+            </h2>
+            <input class="form-control former col-md-6 mx-auto" name="search" type="text" required="required" id="srchin">
+                 <button class="btn btn-primary mx-auto padding-top-10 former">Search</button>
+        </div>
+    </form>
+</div>
+<?php if(isset($_POST['search'])){ $key = $_POST['search'];
+    echo "<div class='container-fluid padding-top-20'>
+            <table class='table table-hover animated fadeInUp'>
+                <thead>
+                    <tr >
+                        <th scope = 'col' > ID</th >
+                        <th scope = 'col' > Title</th >
+                        <th scope = 'col' > First Name </th >
+                        <th scope = 'col' > Last Name </th >
+                        <th scope = 'col' > Photo</th >
+                        <th scope = 'col' ></th >
+                        <th scope = 'col' ></th >
+                    </tr >
+                    </thead >
+                    <tbody>";
+                        searchContact($key);
+              echo "</tbody>
+            </table>
+         </div>";}

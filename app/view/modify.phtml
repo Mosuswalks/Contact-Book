@@ -1,0 +1,90 @@
+
+<section class="container" id="main">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group card animated fadeInUp" id="form_container">
+
+            <p class="h1 text-center padding-top-10 mb-4"><i class="fa fa-address-book" aria-hidden="true"></i> Modify Contact</p>
+
+            <div class="container col-10">
+
+                <div class="form-group row">
+                    <div class="form-group col-sm-2">
+                        <label class="col-form-label" for="defaultForm-title">Title</label>
+                        <input type="text" name="title" required="required" class="form-control"id="defaultForm-title" value="<?php echo $contact[1]?>">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="col-form-label" for="defaultForm-fname">First Name</label>
+                        <input type="text" name="fname" required="required" class="form-control" id="defaultForm-fname" value="<?php echo $contact[2]?>">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="col-form-label" for="defaultForm-lname">Last Name</label>
+                        <input type="text" name="lname" required="required" class="form-control" id="defaultForm-lname" value="<?php echo $contact[3]?>">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-sm-3">
+                        <i class="fa fa-phone prefix grey-text"></i>
+                        <label class="col-form-label" for="defaultForm-phone">Home Number</label>
+                        <input type="tel" name="homenum" id="defaultForm-phone" class="form-control" value="<?php echo $contact[7]?>">
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <i class="fa fa-mobile prefix grey-text" aria-hidden="true"></i>
+                        <label class="col-form-label" for="defaultForm-cell">Cell Number</label>
+                        <input type="tel" name="cellnum" id="defaultForm-cell" class="form-control" value="<?php echo $contact[6]?>">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <i class="fa fa-briefcase prefix grey-text" aria-hidden="true"></i>
+                        <label class="col-form-label" for="defaultForm-office">Office Number</label>
+                        <input type="tel" name="officenum" id="defaultForm-office" class="form-control" value="<?php echo $contact[8]?>">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-sm-6">
+                        <i class="fa fa-envelope prefix grey-text"></i>
+                        <label class="col-form-label" for="defaultForm-email">Email</label>
+                        <input type="text" name="email" id="defaultForm-email" class="form-control" value="<?php echo $contact[4]?>">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <label class="col-form-label" for="defaultForm-website">Website</label>
+                        <input type="text" name="website" id="defaultForm-website" class="form-control" value="<?php echo $contact[5]?>">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-sm-6">
+                        <i class="fa fa-facebook prefix"></i>
+                        <label class="col-form-label" for="defaultForm-facebook">Facebook</label>
+                        <input type="text" name="facebook" id="defaultForm-facebook" class="form-control" value="<?php echo $contact[9]?>">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <i class="fa fa-twitter  prefix grey-text"></i>
+                        <label class="col-form-label" for="defaultForm-twitter">Twitter</label>
+                        <input type="text" name="twitter" id="defaultForm-twitter" class="form-control" value="<?php echo $contact[10]?>">
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-sm-12">
+                        <i class="fa fa-comment prefix " aria-hidden="true"></i>
+                        <label class="col-form-label" for="defaultForm-comments">Comments</label>
+                        <textarea class="form-control" name="comments" id="defaultForm-comments" rows="1"><?php echo $contact[11]?></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class=" form-group">
+                        <label class="btn btn-default">
+                            <i class="fa fa-file-image-o pre-fix" aria-hidden="true"></i>
+                            Upload Photo:
+                            <input type="file" name="picture" id="file">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group center">
+                    <div class="form-group text-center">
+                        <button type="submit" name="update" value="update" id="form_btn" class="btn btn-lg btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
